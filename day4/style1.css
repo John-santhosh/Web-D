@@ -1,0 +1,10 @@
+/*h3{
+	color:orange;
+	font-size: 5em;
+   }*/
+
+p , h3 { 
+	color: blue; 
+	width: 200px;
+	border: 2px solid black;
+}
