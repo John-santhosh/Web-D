@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		[class^="abcd"]  /*will check the stating of the attribute and apply the style to it */
+		{
+			background: orangered;
+		}
+		[id$="asd"]  /*will check the ending of the attribute and apply the style to it *
+		{
+			background: forestgreen;
+
+		}
+	</style>
+</head>
+<body>
+	<h2>CSS [attribute$="value"] Selector</h2> <!-- apply style to attribute with start value -->
+	<h1>CSS [attribute^="abcd"] Selector</h1>  <!-- apply style to attribute with end value -->
+	<p class="abcd">ரெண்டு ஒன்னு பாக்கலாம் நிக்குறியா தெம்பா </p>
+	<h1 class="bcde-123">எப்பவும் லைஃப் திரும்பலாம் </h1>
+	<p class="abcdefgh">நம்புறியா நண்பா</p>
+	
+	<p class="abcd" > checking ^ it worked here </p>
+	<p class="bcd" > checking ^ its not</p>
+	<div id="abc_asd">ரிஸ்க் எடுக்கறதெல்லாம் ரஸ்க் சாப்பிடறது மாதிரி</div>
+	<div id="abc">வேணா வலிக்குது அழுதுறுவேன்.</div>
+	<div id="stuvwasd">நான் அப்டியே ஷாக் ஆயிட்டேன்</div>
+	<p id="abc-asd">எந்த ஒரு விசயத்தையும் பிளான் பண்ணாம பண்ணா இப்படித்தான்!  பிளான் பண்ணி பண்ணனும்</p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		[title~=linux]{
+			border: 5px solid red; /*only appy if exact word is found */
+		}
+		[title|=top]{
+			background: yellow; /* only apply to exact word or a word seperated by - */
+		}
+	</style>
+</head>
+<body>
+		<h2>CSS [attribute|="value"] Selector</h2>
+		<h2>[attribute~="value"] selector</h2>
+		<p title="top- linux"> JoHn SaNtHoSh </p>
+		<img src="rabbit.jpeg" title="top-animal" width="150" height="100">
+		<img src="linux.jpeg" title="linux"width="150" height="100">
+		<img src="linux.jpeg" title="logo of linux" width="150" height="113">
+</body>
+</html>

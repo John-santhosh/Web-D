@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div > p  /* > is Child Selector which is used to match all the elements which are children of a specified element*/
+			/* the style will apply only the elements while in the specified order , like in line 5 */
+{
+  background-color: yellow;
+}
+</style>
+</head>
+<body>
+
+<h2>Descendant Selector</h2>
+<div>
+  <p>நான் p, div இரண்டிற்குள்ளும் இருக்கிறேன்.  எனவே எனக்கு style பொருந்தும்.  </p>
+  <p>நானும் p, div இரண்டிற்குள்ளும் இருக்கிறேன்.  எனவே எனக்கு style பொருந்தும். </p>
+  <section><p>நானும் தான் p, div இரண்டிற்குள்ளும் இருக்கிறேன். ஆனால், sectionகுள் இருக்கிறேன்.   style பொருந்தாது.</p></section>
+</div>
+
+<p>நான் pஇல் மட்டும் தான்  இருக்கிறேன்.  எனவே எனக்கு style பொருந்தாது. </p>
+<p>நான் pஇல் மட்டும் தான்  இருக்கிறேன்.  எனவே எனக்கு style பொருந்தாது.</p>
+
+</body>
+</html>
