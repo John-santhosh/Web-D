@@ -1,0 +1,12 @@
+/*color   --> "#ff0000", "rgb(0,255,0)", "red"
+text-align  --> Left, Right, center, Justify
+text-decoration --> linkஇல் அடிக்கோட்டை எடுக்க
+text-transform  --> uppercase, lowercase, Capitalize
+text-indent     --> இடைவெளி அமைக்க உதவும். */
+
+p.first 
+{color:green; text-decoration:overline; text-transform:uppercase; text-indent:50px;}
+p.second 
+{color:#0000ff; text-align:right; text-decoration:line-through; text-transform:lowercase;}
+p.third
+{color:rgb(255,0,0); text-align:center; text-decoration:underline; text-transform: capitalize;}

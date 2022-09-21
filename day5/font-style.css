@@ -1,0 +1,6 @@
+p.first {font-family:"Tiems New Roman", Times, serif; font-style:Oblique; font-size:10;}
+p.second {font-style:italic; font-size:20;}
+p.third {font-style:bold; font-size:30;}
+a:link{color: yellow ; background-color: red;}
+a:hover{color: hotpink; background-color: palegreen;}
+a:active{color: blue;background-color: blueviolet;}
