@@ -1,0 +1,21 @@
+table{
+	width: 60%; height: 40% ; border: solid darkred; border-collapse: collapse;
+} /*collapse is is used to combine seperated table borders*/
+th{
+	color: black; border: 2px solid green; background: darkgrey;
+}
+td{
+    color: yellow; border: 2px solid orangered; background: grey;
+}
+div{ 
+	border: solid; width: 60%; height: 40%; margin: 30px; padding: 30px;
+/*try this without margin to see difference */
+/*padding is used set space within the border*/
+}
+body{
+	background-color: green;
+	background-image:url(linux.jpeg); 
+	/*background-repeat: no-repeat;*/
+	background-repeat: repeat-x;      /* will repeat the img in x axis */
+	/*background-repeat: repeat-y*/
+}

@@ -1,0 +1,35 @@
+div.static	/*Static positioned elements are not affected by the top, bottom, left, and right properties.*/
+{
+	border: green solid;
+	position: static;
+	
+}
+div.fixed	/*it always stays in the same place even if the page is scrolled.*/
+{
+	background-color: lightgreen;
+ border: 2px red solid;
+ position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px
+}
+div.absolute	/* Tells the absolute postion where it should palced , Refer -- https://www.w3schools.com/css/css_positioning.asp*/
+{
+	position: absolute;
+	top: 55%;
+	left: 0%;
+	width: 30%;
+	height: 22%;
+	border: 3px solid orange;
+
+}
+
+div.sticky
+{
+	position: sticky;
+	top: 0;
+	width: 20px;
+	height: 30%;
+	border: 2px solid red;
+	background-color: lightgreen;
+}
