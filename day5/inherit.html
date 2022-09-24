@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+span {
+  color: red;
+  border: 1px solid black;
+}
+
+.extra span {
+  color: inherit; /*inherit - The inherit keyword specifies that a property should inherit its value from its parent element.
+
+ */
+}
+</style>
+</head>
+<body>
+
+<div>
+  Here is <span>a span element</span> which is red, as it is span element
+</div>
+
+<div class="extra" style="color:blue">
+  Here is <span>a span element</span> which is blue, because it inherits from its parent.
+</div>
+
+<div style="color:red">
+  Here is <span>a span element</span> which is red, as it is span element
+</div>
+
+</body>
+</html>

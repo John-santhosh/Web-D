@@ -1,0 +1,11 @@
+div{
+	color: yellow;
+}
+p{
+	color: red;
+}
+.alt /*for <p> the red color will applied but using revert if there is any alternate class 
+			is present in child class ,it will revert the alternate property like inherit.*/
+{
+	color :revert;
+}
