@@ -1,0 +1,9 @@
+.box{
+	float: left;/* we can use right, none, inherit*/
+	width: 150px;
+	height: 150px;
+	margin-right: 30px ;
+	border: 9px dotted red;
+	
+	background-color: skyblue;
+}

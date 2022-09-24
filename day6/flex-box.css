@@ -1,0 +1,12 @@
+.wrapper{
+
+	display: flex;
+	border: 3px solid;
+}
+.wrapper > div
+{
+	flex: 1;
+	border: 2px solid red;
+
+	
+}

@@ -1,0 +1,8 @@
+
+div.one {margin:5px; padding:5px; border:1px; solid red; float:left; text-align:center;} 
+
+div.one img { display:inline; margin: 5px; border:1px solid yellow; width:170px; height:150px; opacity: 0; filter:alpha(opacity=40);}
+
+div.one a:hover img{border:1px solid blue;opacity: 1; filter:alpha(opacity=);}
+
+div.two {text-align:center; font-weight:normal; width:120px; margin:5px;}

@@ -1,0 +1,28 @@
+/*Static Positioning*/
+.static {
+  position: static;
+  background: skyblue;
+}
+
+/* Relative Positioning */
+
+.relative {
+  position: relative;
+  background: skyblue;
+top: 50px;
+left: 30px;
+/*bottom: 30 px; 
+right: 30 px;  */
+}
+
+/*Absolute Positioning - will over lap */
+
+
+.absolute {
+  position: absolute;
+  background: skyblue;
+top: 80%;
+left: 30px;
+/*bottom: 30 px; 
+right: 30 px;  */
+}

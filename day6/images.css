@@ -1,0 +1,12 @@
+div.one{margin: 5px; border: 1px solid red ; padding: 5px; /**/
+ float: left; text-align: center; }
+
+div.one img { 
+	margin: 5px;
+	border:5px solid yellow; width:170px; height:150px;/*specify the image h,w*/
+}
+div.one a:hover img{border: 1px solid blue;}
+div.two {text-align:center; font-weight:normal; width:120px; margin:5px;}
+
+
+/*img{float: right;}*/
