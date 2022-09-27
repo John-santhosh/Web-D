@@ -1,0 +1,13 @@
+.newspaper {
+column-count: 3;
+column-width: 10px ;
+column-rule-style: dotted;
+column-rule-color: darkgoldenrod;
+
+/*column-rule: 4px dashed rgb(79,80, 112);
+column-gap: 40px;*/
+} 
+h1{
+  column-span: all;/*The column-span property specifies how many columns an element should span across.*/
+
+}
