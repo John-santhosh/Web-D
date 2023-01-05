@@ -1,0 +1,29 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+input{
+    outline: none;
+}
+input:invalid{
+    border: 2px solid red;
+    animation: shake 0.1s   ;
+}
+input:valid{
+    border: 2px solid green ;
+}
+@keyframes shake{
+    0%{
+        transform: translateX(4px);
+    }
+    50%{
+        transform: translatex(-4px);
+    }
+    100%{
+        transform: translatex(4px);
+    }
+}
