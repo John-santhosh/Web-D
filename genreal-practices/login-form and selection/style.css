@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+::selection{
+    background-color: rgb(4, 106, 209);
+    color: #fff;
+}
+.img{
+    text-align: center;
+}
+img{
+    width: 100px;
+    /* display: block; */
+    /* margin: auto; */
+}
+.form{
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    padding: 2rem;
+    width: 400px;
+    min-height: 400px;
+}
+.form-title{
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-size: 20px;
+    padding-left: .625rem;
+}
+
+/* form group */
+
+.form-group{
+    height: 48px;
+    /* background: orange; */
+    position: relative;
+    margin: 20px 10px;
+}
+.form-control{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    border: 1px solid #a1a1a1;
+    outline: none;
+    background: none;
+    padding: 1rem;
+    border-radius: .3rem;
+    z-index: 1;
+}
+
+.form-label{
+    position: absolute;
+    left:13px ;
+    top: 13px;
+    color: #a1a1a1;
+    padding: 0 6px;
+    font-size: 14px;
+    transition: .3s;
+    background: #fff;
+
+}
+.form-control:focus+ .form-label{
+    top:-8.5px;
+    z-index: 5;
+    color: dodgerblue;
+}
+.form-control:focus{
+    border: 1px solid dodgerblue;
+} 
+
+.form-control:not(:focus):valid+.form-label{
+    top: -8.5px;
+    z-index: 5;
+}
+
+/* checkbox */
+.check{
+    font-size: 14px;
+    user-select: none;
+}
+
+/* bottom box */
+.bottom-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 10px;
+}
+.bottom-box a{
+    text-decoration: none;
+    font-weight: 600;
+    color: rgb(4, 76, 147);
+}
+.form-button{
+    display: inline-block;
+    padding: 12px 32px;
+    border: none;
+    background-color: rgb(4, 76, 147);
+    border-radius: 5px;
+    cursor: pointer;
+    transform: .3s;
+    color: #fff;
+}
+.form-button:hover{
+    background:rgb(4, 106, 209);
+    box-shadow: 0 10px 36px  rgba(0, 0, 0, 0.24);
+}
+
