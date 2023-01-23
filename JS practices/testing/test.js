@@ -14,16 +14,16 @@
 // alert("hello , " +modName + name.slice(1,10) + ".")
 
 // prompt("enter")
-let myName="santhosh";
-console.log(myName.charAt(5 ))
+// let myName="santhosh";
+// console.log(myName.charAt(5 ))
 
-let myFloat=42
-const myString="42";
-console.log(myFloat===+myString);
-var new2 = "33 123adc  44" ;
-console.log(Number.parseFloat(new2));
-let num3=45.223421;
-console.log(Number(num3.toFixed(3)))
+// let myFloat=42
+// const myString="42";
+// console.log(myFloat===+myString);
+// var new2 = "33 123adc  44" ;
+// console.log(Number.parseFloat(new2));
+// let num3=45.223421;
+// console.log(Number(num3.toFixed(3)))
 
 
 // displaying a random letter form the given name 
@@ -69,26 +69,138 @@ console.log(Number(num3.toFixed(3)))
 //conditional: Switch Statements 
 
 //syntax
-switch (Math.round(Math.random() *5 + 1)){
-    case 1 : console.log(1);
-    break;
-    case 2 : console.log(2);
-    break;
-    case 3 : console.log(3);
-    break;
-    case 4 : console.log(4);
-    break;
-    default: console.log("No Match");
-}
+// switch (Math.round(Math.random() *5 + 1)){
+//     case 1 : console.log(1);
+//     break;
+//     case 2 : console.log(2);
+//     break;
+//     case 3 : console.log(3);
+//     break;
+//     case 4 : console.log(4);
+//     break;
+//     default: console.log("No Match");
+// }
 
-let playerOne="rock";
-let computer="rock";
+// let playerOne="rock";
+// let computer="rock";
 
-switch(playerOne){
-    case computer : 
-    console.log("tie game");
-    break;
+// switch(playerOne){
+//     case computer : 
+//     console.log("tie game");
+//     break;
     
-    case "rock":
+//     case "rock":
         
+// }
+
+let obj10 ={
+    name : "john",
+    secondName : "santhosh",
+    age: "20"
 }
+
+
+// console.log(obj10[age] )
+
+let arr =[1,2,3,4,5,6,7,8,9];
+console.log(arr)
+arr=arr[4]=30;
+console.log(arr)
+// arr=arr[arr.length]=arr[5]+
+
+// console.log(arr)
+ let colors =["red", "green", "yellow", "orange"]
+
+ //----------------------------
+//The entries() method returns a new Array Iterator object that contains the key/value pairs for each index in the array.
+for (var [color,index] of colors.entries()){
+    console.log(color ,"->" ,index)
+    // console.log()
+}
+
+str =["red", "green", "yellow", "orange"] 
+
+for (var color of str){
+    console.log(color)
+}
+
+let num1=2;
+let num2=00002;
+if(num1===num2)
+ console.log("true");
+else
+ console.log("false");
+
+var x=5; 
+
+console.log(x + " " + y)
+var y=10
+console.log (x + " " + y)
+
+console.log((18 == { age: 18 }))
+
+num1=3;
+function cal() {
+num1=6;
+num2=5;
+num3=num2*num1;
+console.log(num3);
+}
+cal();
+// What is the output of the following code?
+function Add(){
+    console.log(answer)
+    var answer = 2
+};
+Add()
+
+function fn(){
+    let num45=5;
+    console.log(num45)
+   }
+
+   fn()
+//    console.log(num45)
+
+   if (true){
+    let num40=30;
+    console.log(num40)
+   }
+let num40;
+   console.log(num40)
+// let  num40=30;
+
+console.log(typeof 4+5,typeof "6")
+
+//destructuring an object 
+
+let myObj={
+    name: "john",
+    age: 25,
+    gender: 'f',
+    address : {
+        country : "England",
+        city: "London"
+    }
+}
+
+let {name , age , gender,address:{country,city}}=myObj
+console.log(name)
+console.log(city)
+
+
+
+a=10
+console.log(a)
+let a= 5;
+
+
+// console.log(typeof [1,2,3])
+
+// const calculator = require('./calc')
+
+// calculator.addition(2,3)
+
+
+
+

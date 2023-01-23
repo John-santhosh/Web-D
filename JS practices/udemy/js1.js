@@ -246,14 +246,16 @@ if (guests.includes(gName) ){
 
 // console.log(guestCheck(guests))
 
+// -------------------------------------
 // fizz buzz game 
 
-let n=1;
 
+let userNumber = 15;
 let output=[];//we have declared it outside because .. to store and keep the values all the time .. if we declared it inside the values will be only remembered only when the function is called .
 const fizBuzz=()=>{
     
     // return output
+    for(n=1; n<userNumber; n++){ 
     if((n%3===0)&&(n%5===0)){ //only if clearly div by 3 & 5
         output.push("FizzBuzz")
         console.log(output);
@@ -267,13 +269,14 @@ const fizBuzz=()=>{
         output.push(n)
         console.log(output);
     }
-    n++; // incrementing the value of the n by 1 every time the function is called  
-    
-    // console.log(output)
-    // return output+=n
+     // incrementing the value of the n by 1 every time the function is called  
+    }
 }
-// fizBuzz();fizBuzz();fizBuzz();fizBuzz();fizBuzz();fizBuzz();fizBuzz();fizBuzz();fizBuzz();fizBuzz();fizBuzz();fizBuzz();fizBuzz();fizBuzz();fizBuzz();fizBuzz();fizBuzz();fizBuzz();fizBuzz();fizBuzz();fizBuzz();fizBuzz();fizBuzz();fizBuzz();
+// fizBuzz()
 
+// for (i=1; i<userNumber; i++){
+//     fizBuzz();
+// } running function using for loop instead while ..
 
 // -----------------------------------
 // Who's Buying Lunch game 
@@ -284,3 +287,139 @@ const whosPaying=(names) =>`${names[ Math.floor(Math.random()*names.length)]} is
 
 
 // console.log(whosPaying(names))
+
+//--------------------------------
+//while loop challenge --counting from the last 
+
+let snNo=99;
+function beerCount(){
+    while(snNo>=0){
+        let snNo1;
+        let bottleWorld;
+        let distribution;
+
+        if (snNo>=1){
+            distribution= 'Take 1 down, pass it around';
+        }else {
+            distribution ="Go to the store and buy some more"
+        }
+
+        if (snNo-1===0 ||snNo===0){
+            snNo1="no more";
+        }else{
+            snNo1 = snNo-1;
+        }
+
+        // bottle or bottles
+        if (snNo===1){
+            bottleWorld="bottle"
+        }else{
+            bottleWorld="bottles"
+        }   
+        
+        // for last line snNo
+        if(snNo===0){
+            snNo="no more"
+        }
+        console.log(`${snNo} ${bottleWorld} of beer on the wall, ${snNo} ${bottleWorld} of beer. ${distribution}, ${snNo1} bottles of beer on the wall. `);       
+        snNo--;
+        
+    }
+
+}
+
+// beerCount() //calling the function 
+
+
+//-----------------------------------------
+// Fibonacci series 
+
+    
+const fibonacciGenerator = (n) =>{
+    let fibResult =[]
+    let count=2;
+    let x=0;
+    let y=1;
+    if (n<=1){
+        fibResult.push(x)
+        return fibResult
+    }else if(n===2){
+        fibResult.push(x,y)
+        return fibResult;
+    }else{
+        fibResult.push(x,y);
+
+        for (count=2;  count<=n-1 ; count++){
+                fibResult.push(fibResult[fibResult.length-1]+fibResult[fibResult.length-2])
+            }            
+            return fibResult;
+    }
+}
+
+let n= 10;
+let g=fibonacciGenerator(n);
+// console.log(g)
+
+// console.log(fibResult)
+//         fibResult.push(1)
+//         console.log(fibResult)
+//         fibResult.push(2)
+//         console.log(fibResult)
+//         fibResult.push(3)
+//         console.log(fibResult)
+//         fibResult.push(5)
+//         console.log(fibResult)
+//         fibResult.push(fibResult[fibResult.length-1]+fibResult[fibResult.length-2])
+//         console.log(fibResult)
+//         console.log(fibResult)
+//         fibResult.push(13)
+//         fibResult.push(fibResult[fibResult.length-1]+fibResult[fibResult.length-2])
+//         console.log(fibResult)
+//         fibResult.push(fibResult[fibResult.length-1]+fibResult[fibResult.length-2])
+//         console.log(fibResult)
+
+//--------------------------------------------------
+//checking array lastindex - lastindex-1
+let newNum=[1,2,3,4,5,6,7,8,9,10,20]
+
+// console.log(newNum.length, newNum.length-1)
+let d=newNum.length-1
+// console.log(d)
+// console.log(newNum[newNum.length-1]-newNum[newNum.length-2])
+
+// console.log(fibonacciGenerator(n))
+
+
+function fibonacci(num) {
+    // x is representing the first term,
+    // y is representing the second term, and
+    // z is representing the sum of x and y.
+    var answer = [];
+    var x = 0;
+    var y = 1;
+    var z;
+  
+    // Since, the first two elements are fixed.
+    // Storing the first two terms.
+    answer.push(x);
+    answer.push(y); 
+  
+    var i = 2;
+    while (i < num) {
+      z = x + y;
+      x = y;
+      y = z;
+  
+      // Storing the current element
+      answer.push(z);
+      i = i + 1;
+    }
+    return answer;
+  }
+  
+  var num = 10;
+  answer = fibonacci(num);
+  
+//   console.log("The Fibonacci series is till the 10th term is: ", answer);
+
+
