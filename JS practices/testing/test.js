@@ -1,3 +1,4 @@
+// 'use strict'
 // let maxe=280;
 // let tweet=prompt("Write your message here ..")
 // let len=tweet.length
@@ -190,9 +191,9 @@ console.log(city)
 
 
 
-a=10
-console.log(a)
-let a= 5;
+// a=10
+// console.log(a)
+// let a= 5;
 
 
 // console.log(typeof [1,2,3])
@@ -201,6 +202,219 @@ let a= 5;
 
 // calculator.addition(2,3)
 
+//imperative  way of writing code 
+
+let inpNum=3
+let checkSqrt = givenNumb => {
+    let sqr= givenNumb**2;
+    console.log(`sqr of ${givenNumb} is  ${sqr}`)
+    if (sqr%2==0){
+        console.log(`${sqr} is even Number`)
+    }else{
+        console.log(`${sqr} is odd Number`)
+    }
+}
+
+checkSqrt(inpNum)
+//declarative way of writing code 
+
+const checkForSquare =(h) => (h**h%2===0 ? ("is true") : false)
+
+console.log(checkForSquare(6)) 
 
 
+const retRes = ()=> {
+    
+}
 
+// callback function as a argument 
+let  isEven=n=>n%2==0
+
+let  printFirstName=(evenFun,num)=>{
+    const isNumEven= evenFun(num)
+    // let a=cb(san)
+    console.log(`The number ${num} is an Even number ${isNumEven}`)
+
+}
+
+printFirstName(isEven,10)
+
+
+let funFullName =(fName,lName)=>{
+    fName=fName("john1");
+    lName=lName("santhosh2")
+    // console.log()
+    console.log (fName,lName)
+}
+
+let firstNme= (firName)=>{
+    // firName= "john1"
+    return firName
+}
+let lastName= (laName)=>{
+    // laName= "santhosh2"
+    return laName
+}
+
+funFullName (firstNme,lastName) // passing 2 functions as a arguments 
+
+//higher order function 
+let arrs=[1,2,3,4,5]
+
+// let arr1=[];
+// for (ar of arrs){
+//     arr1.push(ar*ar)
+// }console.log(arr1)
+
+const sqaredNum= arrs.map(function(n){return n*n})
+
+console.log(sqaredNum)
+
+const transaction = [1000, 3000 , 4000,2000, -898, 3800, -4500]
+const intoDollar =80;
+
+const convertToDol = transaction.map((amt)=>{
+    return (amt/intoDollar).toFixed(0)
+})
+
+console.log(convertToDol)
+
+let convertToDol1 = transaction.forEach((amt)=>{
+  return((amt/intoDollar).toFixed(0))
+})
+
+console.log("this",convertToDol1)
+
+let firstWithDrawl= transaction.findIndex (function(n){
+   return n<3000
+     
+})
+
+console.log(firstWithDrawl)
+
+let result1 = transaction.some(function(a){
+    return a>0;
+})
+console.log(result1)
+
+let num = [1,2,3,4,10]
+
+// filter 
+const evenNum = num.filter(function(n){
+    let a =n%2==0;
+    return a
+})
+
+console.log(evenNum)
+
+const evenNum1= num.map(function(n){
+    let a = n//%2;
+    return a
+})
+
+console.log(evenNum1)
+
+const filtCheck = transaction.filter((a)=>{
+    return a > 0;
+})
+
+console.log(filtCheck)
+
+// let num = [1,2,3,4,10]
+
+let result = num.reduce(function(acc,b){
+    let totalSum= acc+b;
+    console.log(totalSum)
+    return totalSum;
+},0)
+
+console.log(result)
+
+//------------------------------------
+// chaining methods
+
+let  arRy= [
+    {name: "A", age : 14 , gender : "M"},
+    {name: "B", age : 15 , gender : "M"},
+    {name: "C", age : 26 , gender : "F"},
+    {name: "D", age : 36 , gender : "M"},
+    {name: "E", age : 54 , gender : "F"},
+    {name: "F", age : 23 , gender : "M"}
+]
+
+let males = arRy.filter(function(a){
+    return a.gender=="M"
+}).map(function(a){
+    return a.age
+})
+
+// let ageOfMales = males.map(function(a){
+//     return a.age
+// })
+
+
+console.log(males)
+// console.log(ageOfMales)
+
+// from transaction array filter out the positive elements and calculate the total amount 
+let redm= 0;
+let totalAmt = transaction.filter(function cat2(a){
+    return a>redm;
+}).reduce(function(acc,b){
+    return acc+b
+},0)
+
+console.log(totalAmt)
+
+let sum=0;
+let arr5 = [10,15,20,30];  
+arr5.forEach(function myFunction(element) {  sum= sum+element;  });  
+console.log(sum);
+ 
+console.log(this)
+// whenever we create a function inside of an object , that function is known as a method od that object 
+
+function display1(){
+    console.log(this)
+}
+
+// console.log(display1)
+
+let miObj ={
+    name: "john",
+    age : 23,
+    myFun : function (){
+        console.log(this)
+    }
+}
+
+// miObj.myFun()
+
+let miObj1 ={
+    name: "john",
+    age : 23,
+    myFun : function (){
+        function myFun3(){
+            console.log(this)
+        }
+        myFun3()
+    }
+}
+
+miObj1.myFun()
+
+var golfGames = {
+    tournament: "The Masters",
+    players:
+    [
+      {name:"T. Woods", age:37},
+      {name:"P. Mickelson", age:43}
+    ],
+    showAllGames: function () {
+      currObject = this;
+      this.players.forEach (function (player) {
+        console.log(player.name + ' is playing at ' + currObject.tournament);
+      })
+    }
+  }
+  golfGames.showAllGames();
