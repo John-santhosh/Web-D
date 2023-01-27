@@ -82,17 +82,7 @@
 //     default: console.log("No Match");
 // }
 
-// let playerOne="rock";
-// let computer="rock";
 
-// switch(playerOne){
-//     case computer : 
-//     console.log("tie game");
-//     break;
-    
-//     case "rock":
-        
-// }
 
 let obj10 ={
     name : "john",
@@ -371,11 +361,11 @@ let arr5 = [10,15,20,30];
 arr5.forEach(function myFunction(element) {  sum= sum+element;  });  
 console.log(sum);
  
-console.log(this)
+// console.log(this)
 // whenever we create a function inside of an object , that function is known as a method od that object 
 
 function display1(){
-    console.log(this)
+    // console.log(this)
 }
 
 // console.log(display1)
@@ -401,7 +391,7 @@ let miObj1 ={
     }
 }
 
-miObj1.myFun()
+// miObj1.myFun()
 
 var golfGames = {
     tournament: "The Masters",
@@ -417,4 +407,51 @@ var golfGames = {
       })
     }
   }
-  golfGames.showAllGames();
+//   golfGames.showAllGames();
+
+  function createCar(_name, _company , _color){
+    this.name=_name;
+    this.company=_company;
+    this.color= _color;
+
+    this.drive = function (){
+        console.log(`I am driving ${this.name}`)
+    }
+    
+  }
+ let car1 = new createCar("X4", "BMW" , "red");
+ console.log(car1)
+ car1.drive()
+
+let initNum = 1;
+
+do {
+    if(initNum%2==0){console.log(initNum)}
+    initNum++ 
+    break;
+    
+      
+}while (initNum<=10){
+
+}
+console.log(initNum)
+
+// ----------------------
+// inheritance 
+
+class Person {
+    constructor(_name, _age){
+    this.name= _name;
+    this.age= _age;
+    }
+}
+
+class Teacher extends Person{
+    constructor(_nam, _ag,classStrength){
+        super()
+        this.classStrength= _classStrength;
+    }
+}
+let person1 = new Person("john",22)
+console.log(person1)
+
