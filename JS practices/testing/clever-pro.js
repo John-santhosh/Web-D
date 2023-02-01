@@ -243,6 +243,26 @@ return {result}
 
 console.log(max(numbers))
 
+
+//--------------------------------------------
+// count how many letters in a phrase without space
+const ab = () =>{
+  const phrase = "hi "
+  let result=0;
+  for (letter in phrase){
+    // result+= letter
+    if(phrase[letter]===" "){
+      continue
+    }else{
+    console.log(letter)
+    result = result+ 1}
+  }
+  return {result};
+}
+
+console.log(ab())
+
+//-----------------------
 // counting occurrences of a letter 
 let phrase4 ="haha";
 // const letterFrequency = (phrase4)=>{
@@ -267,7 +287,7 @@ let phrase4 ="haha";
 // console.log(letterFrequency(phrase4))
 
 const letterFrequency = (phrase4)=>{
-  console.log(phrase4)
+  // console.log(phrase4)
 
   // make a `frequency` object {}
   let frequency ={}
@@ -283,8 +303,29 @@ const letterFrequency = (phrase4)=>{
   }
   return frequency
 }
-console.log(letterFrequency("haha"))
+// console.log(letterFrequency("haha jojo jojo"))
 // console.log(letterFrequency("santhosh"))
+
+// ---------------------
+// word frequencies in a given sentence 
+
+const wordFrequency =(Phrase6) => {
+  // let frequency ={}
+  const words=phrase6.split(" ")
+  console.log(words)
+  return letterFrequency(words)
+  
+}
+phrase6="john is john"
+console.log(wordFrequency(phrase6))
+
+
+
+
+
+
+
+
 
 
 let person={
@@ -320,16 +361,6 @@ console.log("this",person1)
 // console.log(person1)
 
 
-// word frequencies in a given sentence 
-
-const wordFrequency =(Phrase6) => {
-  // let frequency ={}
-  const words=phrase6.split(" ")
-  return letterFrequency(words)
-  
-}
-phrase6="john is john"
-console.log(wordFrequency(phrase6))
 
 
 // Write a function that takes in an array and sort the numbers inside from least to greatest
@@ -354,7 +385,7 @@ console.log(wordFrequency(phrase6))
 
 let arr1= [4,3,5,6,7,3];
 console.log(typeof arr1,arr1)
-console.log(  sortArray(arr1))
+// console.log(  sortArray(arr1))
 //--------------------------------------------------
 
 // Write a function that takes a parameter (hours) and converts it to seconds
@@ -396,3 +427,89 @@ var getDaysInMonth = function(month,year) {
 
 let maxie=[951,4,3,6,2,567]
 console.log(findMax(maxie))
+
+
+
+// ---------------------------------------
+// higher Order Functions 
+
+let ac= [1,2,3,4,5,6,7]
+function abc()
+{
+ac.map(function(n){ 
+  console.log(n*2)
+})}
+
+abc()
+
+function n(){
+  console.log("hi")
+}
+let ab12 = (n)=>n
+
+ab12(n())
+
+//filter 
+let abb= ac.filter(function(n){
+  return n>3
+})
+
+console.log(abb)
+
+const aaBb= function (numbers,greaterNumber){
+  let result=[]
+  for (let number of numbers){
+    if (number > greaterNumber){
+      result.push(number)
+    }
+  }return result
+}
+
+console.log(aaBb(ac,3))
+
+const actors=[
+  {name: "john", netWorth: 200000},
+  {name: "santhosh",netWorth: 100}
+]
+
+let result= actors.filter(function(act){
+  return act.netWorth>10
+})
+
+console.log(result)
+
+console.log(result[1])
+let names=result.map(function(res){
+  return res.name
+})
+console.log(names.join(", "))
+// console.log(names)
+
+// console.log(result[1])
+// let NeWorth=result[netWorth].reduce(function(a,b){
+//   return a+b
+// })
+
+//--------------------------
+// let neWor=result.map(function(res){
+//   return res.netWorth
+// }).reduce((a,b)=>{
+//   // return Number(a)+ Number(b)
+//   return a+b;
+// },0)
+// console.log(neWor)
+
+
+console.log(actors.reduce((prev,curr)=>prev+ curr.netWorth,0))
+
+
+
+
+
+// let ary=[1,2,3,4]
+// let resUlt= ary.reduce(function(a,b){
+  
+//   return a*b
+// },1)
+
+// console.log(resUlt)

@@ -94,9 +94,9 @@ let obj10 ={
 // console.log(obj10[age] )
 
 let arr =[1,2,3,4,5,6,7,8,9];
-console.log(arr)
+// console.log(arr)
 arr=arr[4]=30;
-console.log(arr)
+// console.log(arr)
 // arr=arr[arr.length]=arr[5]+
 
 // console.log(arr)
@@ -105,37 +105,37 @@ console.log(arr)
  //----------------------------
 //The entries() method returns a new Array Iterator object that contains the key/value pairs for each index in the array.
 for (var [color,index] of colors.entries()){
-    console.log(color ,"->" ,index)
+    // console.log(color ,"->" ,index)
     // console.log()
 }
 
 str =["red", "green", "yellow", "orange"] 
 
 for (var color of str){
-    console.log(color)
+    // console.log(color)
 }
 
 let num1=2;
 let num2=00002;
 if(num1===num2)
- console.log("true");
-else
- console.log("false");
+//  console.log("true");
+// else
+//  console.log("false");
 
 var x=5; 
 
-console.log(x + " " + y)
+// console.log(x + " " + y)
 var y=10
-console.log (x + " " + y)
+// console.log (x + " " + y)
 
-console.log((18 == { age: 18 }))
+// console.log((18 == { age: 18 }))
 
 num1=3;
 function cal() {
 num1=6;
 num2=5;
 num3=num2*num1;
-console.log(num3);
+// console.log(num3);
 }
 cal();
 // What is the output of the following code?
@@ -143,25 +143,25 @@ function Add(){
     console.log(answer)
     var answer = 2
 };
-Add()
+// Add()
 
 function fn(){
     let num45=5;
     console.log(num45)
    }
 
-   fn()
+//    fn()
 //    console.log(num45)
 
    if (true){
     let num40=30;
-    console.log(num40)
+    // console.log(num40)
    }
 let num40;
-   console.log(num40)
+//    console.log(num40)
 // let  num40=30;
 
-console.log(typeof 4+5,typeof "6")
+// console.log(typeof 4+5,typeof "6")
 
 //destructuring an object 
 
@@ -176,8 +176,8 @@ let myObj={
 }
 
 let {name , age , gender,address:{country,city}}=myObj
-console.log(name)
-console.log(city)
+// console.log(name)
+// console.log(city)
 
 
 
@@ -205,12 +205,12 @@ let checkSqrt = givenNumb => {
     }
 }
 
-checkSqrt(inpNum)
+// checkSqrt(inpNum)
 //declarative way of writing code 
 
 const checkForSquare =(h) => (h**h%2===0 ? ("is true") : false)
 
-console.log(checkForSquare(6)) 
+// console.log(checkForSquare(6)) 
 
 
 const retRes = ()=> {
@@ -223,7 +223,7 @@ let  isEven=n=>n%2==0
 let  printFirstName=(evenFun,num)=>{
     const isNumEven= evenFun(num)
     // let a=cb(san)
-    console.log(`The number ${num} is an Even number ${isNumEven}`)
+    // console.log(`The number ${num} is an Even number ${isNumEven}`)
 
 }
 
@@ -246,7 +246,7 @@ let lastName= (laName)=>{
     return laName
 }
 
-funFullName (firstNme,lastName) // passing 2 functions as a arguments 
+// funFullName (firstNme,lastName) // passing 2 functions as a arguments 
 
 //higher order function 
 let arrs=[1,2,3,4,5]
@@ -258,7 +258,7 @@ let arrs=[1,2,3,4,5]
 
 const sqaredNum= arrs.map(function(n){return n*n})
 
-console.log(sqaredNum)
+// console.log(sqaredNum)
 
 const transaction = [1000, 3000 , 4000,2000, -898, 3800, -4500]
 const intoDollar =80;
@@ -267,25 +267,25 @@ const convertToDol = transaction.map((amt)=>{
     return (amt/intoDollar).toFixed(0)
 })
 
-console.log(convertToDol)
+// console.log(convertToDol)
 
 let convertToDol1 = transaction.forEach((amt)=>{
   return((amt/intoDollar).toFixed(0))
 })
 
-console.log("this",convertToDol1)
+// console.log("this",convertToDol1)
 
 let firstWithDrawl= transaction.findIndex (function(n){
    return n<3000
      
 })
 
-console.log(firstWithDrawl)
+// console.log(firstWithDrawl)
 
 let result1 = transaction.some(function(a){
     return a>0;
 })
-console.log(result1)
+// console.log(result1)
 
 let num = [1,2,3,4,10]
 
@@ -295,30 +295,30 @@ const evenNum = num.filter(function(n){
     return a
 })
 
-console.log(evenNum)
+// console.log(evenNum)
 
 const evenNum1= num.map(function(n){
     let a = n//%2;
     return a
 })
 
-console.log(evenNum1)
+// console.log(evenNum1)
 
 const filtCheck = transaction.filter((a)=>{
     return a > 0;
 })
 
-console.log(filtCheck)
+// console.log(filtCheck)
 
 // let num = [1,2,3,4,10]
 
 let result = num.reduce(function(acc,b){
     let totalSum= acc+b;
-    console.log(totalSum)
+    // console.log(totalSum)
     return totalSum;
 },0)
 
-console.log(result)
+// console.log(result)
 
 //------------------------------------
 // chaining methods
@@ -343,7 +343,7 @@ let males = arRy.filter(function(a){
 // })
 
 
-console.log(males)
+// console.log(males)
 // console.log(ageOfMales)
 
 // from transaction array filter out the positive elements and calculate the total amount 
@@ -354,12 +354,12 @@ let totalAmt = transaction.filter(function cat2(a){
     return acc+b
 },0)
 
-console.log(totalAmt)
+// console.log(totalAmt)
 
 let sum=0;
 let arr5 = [10,15,20,30];  
 arr5.forEach(function myFunction(element) {  sum= sum+element;  });  
-console.log(sum);
+// console.log(sum);
  
 // console.log(this)
 // whenever we create a function inside of an object , that function is known as a method od that object 
@@ -420,8 +420,8 @@ var golfGames = {
     
   }
  let car1 = new createCar("X4", "BMW" , "red");
- console.log(car1)
- car1.drive()
+//  console.log(car1)
+//  car1.drive()
 
 let initNum = 1;
 
@@ -434,24 +434,113 @@ do {
 }while (initNum<=10){
 
 }
-console.log(initNum)
+// console.log(initNum)
 
 // ----------------------
 // inheritance 
-
+// classical and method inheritance 
 class Person {
     constructor(_name, _age){
     this.name= _name;
     this.age= _age;
     }
+    welcome(){
+        console.log(` welcome ${this.name} `)
+    }
 }
 
 class Teacher extends Person{
-    constructor(_nam, _ag,classStrength){
-        super()
+    constructor(_nam, _ag,_classStrength){
+        super(_nam, _ag)
         this.classStrength= _classStrength;
+    }
+    test(){
+        this.welcome()
+    }
+}
+
+class Students extends Teacher{
+    constructor(_nme, _ag,_classStrength,_totalMark){
+        super (_nme, _ag,_classStrength)
+        this.totalMark=_totalMark
+    }
+    test(){
+        this.welcome()
     }
 }
 let person1 = new Person("john",22)
-console.log(person1)
+// console.log(person1)
 
+let person2 = new Teacher("santhosh",40, 70)
+// console.log(person2);
+let person3 = new Students("john santhosh", 23 , 48 , 800)
+// console.log(person3)
+
+// person3.test()
+// person2.test()
+
+// ------------------------------------------
+// polymorphism 
+
+class Animal {
+    sound(){
+        console.log("animals makes different sounds ")
+    }
+}
+
+let p1= new Animal()
+// console.log(p1)
+
+
+//=------------------------------------
+
+let newObj ={}
+// console.log(newObj)
+
+let newObj1={
+    name: "john",
+    age: 23
+}
+// console.log(newObj1)
+// console.log(newObj1.hasOwnProperty('name'))
+
+// let arr3= ["john", 2,3,4,5]
+// console.log(typeof arr3)
+
+// let str5= "john"
+// console.log(str5[1]);
+
+function Persons(_name,_age){ 
+    this.name= _name
+    this.age= _age
+
+}
+
+let objNew= new Persons("santhosh",24)
+// console.log(objNew);
+
+// function john(){
+
+// }
+// console.log(john())
+
+
+function evenDiv(num,divNum){
+    
+        return num%divNum===0
+    
+}
+
+// console.log(evenDiv(20,3)) // retuning undefined if the condition get false 
+// console.log(evenDiv(20,2))
+function evenChk(num1,num2){
+    if (num1%num2===0){
+    console.log( num2);
+}}
+
+// evenChk(10,45)
+
+let arr33= []
+console.log(arr33)
+let objj = {}
+console.log(objj);
