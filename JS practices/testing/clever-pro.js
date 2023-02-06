@@ -365,26 +365,26 @@ console.log("this",person1)
 
 // Write a function that takes in an array and sort the numbers inside from least to greatest
 
-  function sortArray(array) {
+  // function sortArray(array) {
 
-    let resultArray=[];
+  //   let resultArray=[];
     
-    for (let arr of array ){
-      console.log(" arr is ",arr)
-      for(let ar  of array  ){
-        console.log("ar is ",ar)
-        if(ar<arr){
-          resultArray=resultArray+ ar
-          console.log(`${ar}<${arr}`)
+  //   for (let arr of array ){
+  //     console.log(" arr is ",arr)
+  //     for(let ar  of array  ){
+  //       console.log("ar is ",ar)
+  //       if(ar<arr){
+  //         resultArray=resultArray+ ar
+  //         console.log(`${ar}<${arr}`)
 
-        }
-      }
-    }
-    return Number(resultArray)
-  }
+  //       }
+  //     }
+  //   }
+  //   return Number(resultArray)
+  // }
 
-let arr1= [4,3,5,6,7,3];
-console.log(typeof arr1,arr1)
+// let arr1= [4,3,5,6,7,3];
+// console.log(typeof arr1,arr1)
 // console.log(  sortArray(arr1))
 //--------------------------------------------------
 
@@ -513,3 +513,128 @@ console.log(actors.reduce((prev,curr)=>prev+ curr.netWorth,0))
 // },1)
 
 // console.log(resUlt)
+
+
+
+function sortArray(a) {
+  let temp
+for (let i=0; i<a.length; i++){
+  if (a[i]>a[i+1]){
+  
+  temp = a[i];
+  a[i]=a[i+1]
+  a[i+1] = temp 
+  console.log(temp)
+}
+// return a;
+}
+}
+
+let arr1= [4,5,4,3,6];
+// console.log(typeof arr1,arr1)
+// console.log( sortArray(arr1))
+
+// console.log(arr1.sort())
+
+function bubbleSort(array) {
+  var done = false;
+  while (!done) {
+    done = true;
+    for (var i = 1; i < array.length; i += 1) {
+      if (array[i - 1] > array[i]) {
+        done = false;
+        var tmp = array[i - 1];
+        array[i - 1] = array[i];
+        array[i] = tmp;
+      }
+    }
+  }
+
+  return array;
+}
+
+var numbersy = [12, 10, 15, 11, 14, 13, 16];
+// console.log(bubbleSort(numbersy));
+// console.log(numbers);
+
+arr = [1,2,1,10,3,4,6]
+
+function bubbleSort(arr){// 1 1 2
+  let temp;
+    for (let i = 0; i < arr.length ; i++){
+        // let swapped = false
+
+        for (let j = 0; j < arr.length; j++){// 0 1 2 1
+            // swapping the elements
+            if (arr[j] > arr[j+1]){
+                temp = arr[j] //temp = 2
+                arr[j] = arr[j+1] //a[j]= 1
+                arr[j+1] = temp //arr[j+1]= 2
+                // swapped = true
+            }
+        }
+
+        // if no elements are swapped
+        // that means our array is sorted
+        // if(!swapped) break;
+    }
+
+    return arr
+}
+
+// console.log("Before sorting: ", arr)
+// console.log("After sorting: ", bubbleSort(arr))
+
+//---------------------------------
+let functionTest= function(a,b,c ) {
+  let innerFun = function(){
+    return `hi ${a}`
+  }
+  console.log(innerFun())
+  
+  return {
+    name: a,
+    age: b,
+    area: c
+  }
+}
+// let aag= functionTest("john",22,"chennai")
+// console.log(aag)
+// console.log(functionTest("sant",43,"chennai"))
+// functionTest.innerFun
+
+function countTrue(arr) {
+  // let result=0;
+  return arr.filter(Boolean)
+	// 	if(a===true)
+  //   {
+  //     result+=1
+  //   }
+	// })
+  // return result;
+}
+
+
+//-------------------------------------
+// console.log(countTrue([true, false , true , true]))
+
+function addUp(num) {
+	let result = 0;
+	for (let i=1; i<=num; i++){
+		result += i
+	}
+  return result
+}
+// console.log(addUp(4))
+
+function addDow (num){
+  let abc = num.reduce(function(prev,curr){
+  return prev+ curr;
+  },0)
+  return abc;
+}
+
+// console.log(addDow([1,2,3,4]))
+
+console.log(5 << 2)
+//10 << 3 = 10 * 2^3 = 10 * 8 = 80
