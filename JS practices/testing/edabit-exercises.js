@@ -26,7 +26,7 @@ function fiftyThirtyTwenty(ati) {
         Savings: twenty
     }
 }
-console.log(fiftyThirtyTwenty(10000))
+// console.log(fiftyThirtyTwenty(10000))
 // Expected: '{ Needs: 5000
 
 //------------------------------------------
@@ -166,7 +166,7 @@ for (const [key, value] of Object.entries(obj)) {
   }
 return result
 }
-
+// const toArray = Object.entries;
 // console.log((toArray({ a: 1, b: 2 })))
 
 // ---------------------------------------------------
@@ -474,7 +474,7 @@ function addName(obj, name, value) {
     // return obj
 }
 
-console.log(addName({ piano: 500, stereo: 300 }, "Caligula", 440))
+// console.log(addName({ piano: 500, stereo: 300 }, "Caligula", 440))
 
 // ----------------------------
 
@@ -523,7 +523,8 @@ function generation(x, y) {
 // // console.log(b);
 // // console.log(a);
 
-
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// count the length of the number 
 let num = -123456789;
 let count = 0;
 while (num!=0){
@@ -531,8 +532,9 @@ while (num!=0){
     count++;
 }
 
-console.log(count)
+// console.log(count)
 
+// recursion 
 
 function factorial(x) {
     // TERMINATION
@@ -542,5 +544,129 @@ function factorial(x) {
     // RECURSION
     return x * factorial(x -1);
   }
-  console.log(factorial(5));
+//   console.log(factorial(5));
   // 6
+
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// Your task is to create a Circle constructor that creates a circle with a radius provided by an argument. The circles constructed must have two methods getArea() (PI*r^2) and getPerimeter() (2*PI*r) which give both respective areas and perimeter (circumference).
+
+  class Rectangle {
+    constructor(sideA, sideB) {
+      this.sideA = sideA
+      this.sideB = sideB
+    }
+    getArea(){return this.sideA*this.sideB}
+    getPerimeter(){return (this.sideA + this.sideB) *2}
+  }
+
+//   let Rect = new Rectangle(10,10)
+//   console.log(Rect.getPerimeter())
+
+  class Circle {
+    constructor(radius){
+        this.rad = radius;
+        this.pi= Math.PI
+    }
+    
+    getArea(){
+        return this.pi*this.rad**2
+    }
+
+    getPerimeter(){
+        return 2*this.pi*this.rad
+    }
+}
+
+// let q = new Circle(4.44);
+// console.log(q.getArea());
+// console.log(q.getPerimeter());
+
+
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+//Create a function that takes an object and returns the keys and values as separate arrays.
+
+function keysAndValues(obj) {
+    let result = [[],[]]
+	for (let [a,b] of Object.entries(obj)){
+        result[0].push(a);
+        result[1].push(b);
+    }
+    return result;
+
+    // Another Method 
+    // const key = Object.keys(obj)
+    // console.log(key)
+    // const values = key.map(function(a){
+    //     console.log(obj[a])
+    // }) ;
+    // return [key,values]
+}
+
+// console.log(keysAndValues({ a: "Apple", b: "Microsoft", c: "Google" }))
+
+
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// check whether the given parameter is an Object or not 
+function isObject(value) {
+	return value instanceof Object
+}
+
+// console.log(isObject(new RegExp('^[a-zA-Z0-9]+$', 'g')))
+
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// Create the function that takes an array with objects and returns the sum of people's budgets.
+
+function getBudgets(arr) {
+	// return arr.map(function(a){
+    //     console.log(a["budget"])
+    // })
+
+    // Another Method
+    return arr.reduce(function(prev,curr){
+        return prev+curr["budget"] // curr.budget 
+    },0)
+}
+
+// console.log(getBudgets([
+//     { name: "John", age: 21, budget: 23000 },
+//     { name: "Steve",  age: 32, budget: 40000 },
+//     { name: "Martin",  age: 16, budget: 2700 }
+//   ]))
+
+
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// 
+
+function calculateLosses(obj) {
+//     let result =0;
+//     Object.values(obj).forEach(function(a){
+//     return result+=a
+//    })
+
+// Another Method
+    let result = Object.values(obj).reduce(function(acc,cur){    return acc+cur   },0)
+    return result===0 ? "Lucky you!" : result
+}
+// console.log(calculateLosses({tv: 30,
+//     skate: 20,
+//     stereo: 50,}))
+
+
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+//Use ES6 object destructuring to rename the variable alias to nickname and give nickname a default value of "JD".
+
+// =-=-=-= how to destructure a object and how to change the default "Key name" name to a new "Key name" 
+
+// <=-=-=-=-=-=-> question <=-=-=-=-=-=-=->
+
+// const testObj= { first: "James", last: "Baker" }
+// let  { first = "John", last = "Doe", alias } = testObj
+
+// <=-=-=-=-=-=-> solution <=-=-=-=-=-=-=->
+
+
+// const solveObj=  { first: "James", last: "Baker" ,alias: "JD"}
+// let { first = "John", last = "Doe", alias:nickname }=solveObj
+
+// console.log(nickname) //printing the value of alias using "nickname"
+

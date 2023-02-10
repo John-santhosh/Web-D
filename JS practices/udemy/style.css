@@ -1,3 +1,7 @@
 body{
     background: rgb(65, 65, 65);
 }
+
+.johnClass{
+    font-size: 4rem;
+}
