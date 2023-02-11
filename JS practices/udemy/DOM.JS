@@ -102,8 +102,13 @@ will return every elements with the "id"
 // => www.bing.com
 
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-addEventListener()
+addEventListener()//https://www.w3schools.com/js/js_htmldom_eventlistener.asp
 
+// syntax 
+// element.addEventListener(event, function, useCapture);
+//=> Note that you don't use the "on" prefix for the event; use "click" instead of "onclick".
 
+// example
+// element.addEventListener("click", mySecondFunction);
 
 

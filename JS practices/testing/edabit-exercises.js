@@ -670,3 +670,103 @@ function calculateLosses(obj) {
 
 // console.log(nickname) //printing the value of alias using "nickname"
 
+
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// 
+
+function tpChecker(home) {
+    let oneTp  = home.tp*500
+    let result = 0;
+    let noOfDays = 0 ;
+    let noOfPeople = 57 * home.people;
+    noOfPeople>(Math.floor(oneTp / noOfPeople))
+    const days = (500 * home.tp) / (57 * home.people) | 0 ;
+    console.log(days)
+    for(let i=1; i<noOfPeople; i++){
+
+        result=  noOfPeople* i 
+
+        if (result>oneTp)  break ;
+            noOfDays+=1
+        }
+
+        return (`Your TP will ${noOfDays>= 14 ? "": "only "}last ${noOfDays} days, ${noOfDays>= 14 ? "no need to panic!": "buy more!"}`)
+}
+
+// console.log(tpChecker({ people: 2, tp: 1}))
+
+
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// Given an object of the stolen items and a string in lowercase representing the name of the pet (e.g. "rambo"), return:
+
+// "Rambo is gone..." if the name is on the list.
+// "Rambo is here!" if the name is not on the list.
+
+// https://edabit.com/challenge/FBj5P49wwFzj2Jnfr
+
+function findIt(obj, name) {
+    let result = (name.slice(0,1).toUpperCase())+ name.slice(1)
+    return name in obj ? `${result} is gone...` : `${result} is here!`
+}
+
+// 
+// 
+// console.log(findIt({tv: 30,stereo: 50,}, "rambo"))
+
+
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// Destructuring Objects
+
+
+let names = []
+
+let users = [
+  { name: "John", email: "john@example.com" },
+  { name: "Jason", email: "jason@example.com" },
+  { name: "Jeremy", email: "jeremy@example.com" },
+  { name: "Jacob", email: "jacob@example.com" }
+]
+// console.log(users[3]["name"])
+
+for(let {name} of users) {
+      names.push(name)
+}
+
+// console.log(names) // should log ["John", "Jason", "Jeremy", "Jacob"]
+
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// Distance Between Two Points
+// https://edabit.com/challenge/caeSeQ3K53GMQKenX
+
+function getDistance(x, y) {
+    let x1 = x["x"]
+    let x2 = y["x"]
+    let y1 = x["y"]
+    let y2 = y["y"]
+    let a =  Math.sqrt(Math.pow((x2-x1),2)+ Math.pow((y2-y1),2))
+    return Number(a.toFixed(3))
+}
+
+// console.log(getDistance({x: -2, y: 1}, {x: 4, y: 3}))
+
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// 
+
+function afterNYears(names, n) {
+	// let a = Object.values(names).map(function(a){
+    //     return a+n
+    // })
+    let a = Object.keys(names)
+    console.log(a)
+    console.log(names["Joel"])
+    
+
+}
+
+console.log(afterNYears({
+    "Joel" : 32,
+    "Fred" : 44,
+    "Reginald" : 65,
+    "Susan" : 33,
+    "Julian" : 13
+  }, 1))
