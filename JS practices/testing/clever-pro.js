@@ -225,7 +225,7 @@ const sumArra =(phrase3)=>{
   return {addValue}
 }
 
-const phrase3=[4,3,2,1]
+// const phrase3=[4,3,2,1]
 // console.log(sumArra(phrase3))
 
 // finding biggest number in a array 
@@ -241,7 +241,7 @@ const max= (numbers)=>{
 return {result}
 }
 
-console.log(max(numbers))
+// console.log(max(numbers))
 
 
 //--------------------------------------------
@@ -260,7 +260,7 @@ const ab = () =>{
   return {result};
 }
 
-console.log(ab())
+// console.log(ab())
 
 //-----------------------
 // counting occurrences of a letter 
@@ -317,7 +317,7 @@ const wordFrequency =(Phrase6) => {
   
 }
 phrase6="john is john"
-console.log(wordFrequency(phrase6))
+// console.log(wordFrequency(phrase6))
 
 
 
@@ -342,7 +342,7 @@ let person={
 
   // objects by  CyberDude Networks Pvt. Ltd.
 
-console.log("objects")
+// console.log("objects")
 let person1={
   // key: "value"
   "name" : "john",
@@ -355,7 +355,7 @@ let person1={
   // }
 }
 
-console.log("this",person1)
+// console.log("this",person1)
 
 // person1.name= "santhosh"; // over riding the value "john" to "santhosh"
 // console.log(person1)
@@ -397,7 +397,7 @@ const howManySeconds = (hours) =>{
   return hour;
 }
 let time= 24;
-console.log(howManySeconds(time))
+// console.log(howManySeconds(time))
 
 //----------------------------------------------------
 // Create a function that takes the month and year (as integers)
@@ -426,7 +426,7 @@ var getDaysInMonth = function(month,year) {
  }
 
 let maxie=[951,4,3,6,2,567]
-console.log(findMax(maxie))
+// console.log(findMax(maxie))
 
 
 
@@ -440,21 +440,21 @@ ac.map(function(n){
   console.log(n*2)
 })}
 
-abc()
+// abc()
 
 function n(){
   console.log("hi")
 }
 let ab12 = (n)=>n
 
-ab12(n())
+// ab12(n())
 
 //filter 
 let abb= ac.filter(function(n){
   return n>3
 })
 
-console.log(abb)
+// console.log(abb)
 
 const aaBb= function (numbers,greaterNumber){
   let result=[]
@@ -465,7 +465,7 @@ const aaBb= function (numbers,greaterNumber){
   }return result
 }
 
-console.log(aaBb(ac,3))
+// console.log(aaBb(ac,3))
 
 const actors=[
   {name: "john", netWorth: 200000},
@@ -476,13 +476,13 @@ let result= actors.filter(function(act){
   return act.netWorth>10
 })
 
-console.log(result)
+// console.log(result)
 
-console.log(result[1])
+// console.log(result[1])
 let names=result.map(function(res){
   return res.name
 })
-console.log(names.join(", "))
+// console.log(names.join(", "))
 // console.log(names)
 
 // console.log(result[1])
@@ -500,7 +500,7 @@ console.log(names.join(", "))
 // console.log(neWor)
 
 
-console.log(actors.reduce((prev,curr)=>prev+ curr.netWorth,0))
+// console.log(actors.reduce((prev,curr)=>prev+ curr.netWorth,0))
 
 
 
@@ -636,5 +636,3 @@ function addDow (num){
 
 // console.log(addDow([1,2,3,4]))
 
-console.log(5 << 2)
-//10 << 3 = 10 * 2^3 = 10 * 8 = 80
