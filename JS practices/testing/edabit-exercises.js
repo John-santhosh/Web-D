@@ -750,23 +750,87 @@ function getDistance(x, y) {
 // console.log(getDistance({x: -2, y: 1}, {x: 4, y: 3}))
 
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// 
+// update the values of an object
+// https://edabit.com/challenge/xtDkfWxEh2hbmAHvn
 
 function afterNYears(names, n) {
-	// let a = Object.values(names).map(function(a){
-    //     return a+n
-    // })
-    let a = Object.keys(names)
-    console.log(a)
-    console.log(names["Joel"])
-    
-
+    for (let name in names){
+        names[name]+=Math.abs(n)
+    }
+    return names
 }
 
-console.log(afterNYears({
-    "Joel" : 32,
-    "Fred" : 44,
-    "Reginald" : 65,
-    "Susan" : 33,
-    "Julian" : 13
-  }, 1))
+// console.log(afterNYears({
+// 	"Ambitious Old Scientist" : 87,
+// 	"Ambitious Scientist" : 42,
+// 	"Slightly Concerned Young Scientist" : 23
+// }, -35))
+
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// creating constructor function 
+
+// <=-=-=-=-=-Experted output =-=-=-=-=->
+// a1.fname ➞ "John"
+
+// a1.lname ➞ "Smith"
+
+// a1.fullname ➞ "John Smith"
+
+// a1.initials ➞ "J.S"
+// https://edabit.com/challenge/qNMtrtizgssAQqP2b
+class Name {
+	constructor(fname,lname){
+        this.fname= fname.slice(0,1).toUpperCase()+fname.slice(1).toLowerCase();
+        this.lname=  lname.slice(0,1).toUpperCase()+lname.slice(1).toLowerCase();
+        this.fullname= `${this.fname} ${this.lname}`
+        this.initials = `${fname.slice(0,1).toUpperCase()}.${lname.slice(0,1).toUpperCase()}`
+    }
+}
+
+// let a1 = new Name("john", "SMITH")
+
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+//Check If objOne Is Equal to objTwo
+// https://edabit.com/challenge/zvq3A6AJDWmnnK7Ry
+
+function isEqual(objOne, objTwo) {
+    // let a = JSON.stringify(objOne)
+    // console.log(a)
+    // let b = JSON.stringify(objTwo)
+    // console.log(b)
+    // console.log(a===b)
+    return JSON.stringify(objOne)==JSON.stringify(objTwo)
+}
+
+
+// console.log(isEqual({
+//     name: "Jason",
+//     phone: "9853759720",
+//     email: "jason@edabit.com"
+//   },{
+//     name: "Jason",
+//     phone: "9853759720",
+//     email: "jason@edabit.com"
+//   }))
+
+//   =-=-=-=-=-=-=-=-=-=-=-=-=-
+// accessing object's values
+// https://edabit.com/challenge/M9KuMowrYvH24Jwio
+
+const scores = {"A": 100, "B": 14, "C": 9, "D": 28, "E": 145, "F": 12, "G": 3,
+"H": 10, "I": 200, "J": 100, "K": 114, "L": 100, "M": 25,
+"N": 450, "O": 80, "P": 2, "Q": 12, "R": 400, "S": 113, "T": 405,
+"U": 11, "V": 10, "W": 10, "X": 3, "Y": 210, "Z": 23};
+
+function nameScore(name) {
+    let score= 0 ;
+    for(letter in name){
+        score+=scores[name[letter]]
+    }
+    console.log(score)
+    return score <=60 ? "NOT TOO GOOD" :
+    61 <= score && score <=300  ? "PRETTY GOOD" :
+    301 <= score && score <= 599 ? "VERY GOOD" : 
+    "THE BEST"
+}
+
