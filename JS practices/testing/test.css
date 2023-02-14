@@ -22,3 +22,31 @@ body{
 .two{
     background: pink;
 } */
+
+.click{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+#red{
+    background-color: red;
+}
+#yellow{
+    background: yellow
+}
+#green{
+    background: green;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.clear-game{
+    background-color: orange;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 3rem;
+    margin: 2rem 0 ;
+    cursor:pointer;
+    width: 100%;
+}

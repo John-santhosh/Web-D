@@ -636,3 +636,46 @@ function addDow (num){
 
 // console.log(addDow([1,2,3,4]))
 
+// <=-=-=-=-=-=-=-=-=->DOM<=-=-=-=-=-=-=->
+ 
+
+let len =document.querySelectorAll(".click")
+
+// for(let i=0; i<len.length; i++){
+//   len[i].addEventListener("click",handleClick)
+// }
+// console.log()
+// function handleClick(){
+//   console.log(`you clicked ${this.value}`)
+// }
+
+// let red = document.getElementById("red")
+// console.log(red)
+// let yellow = document.getElementById("yellow")
+// let green = document.getElementById("green")
+
+// red.onclick=function(){console.log(len[0].value)}
+// yellow.onclick=function(){console.log(len[1].value)}
+// green.onclick=function(){console.log(len[2].value)}
+let count = {"red":0 , "yellow": 0 , "green" : 0};
+
+len.forEach(function(colors){
+  colors.onclick=function(){
+    count[colors.value]+=1 //=>count["red"] //=>0+1
+    // console.log(count[colors.value]) //=>count["red"]
+    colors.innerHTML=count[colors.value]
+}
+})
+// console.log(document.getElementsByClassName("click")[0].addEventListener("click",handleClick))
+
+function clearScores(){
+len.forEach(function(color){
+  count[color.value]=0
+  // console.log(document.color.value)
+  color.innerHTML=""
+})
+}
+
+let clean = document.querySelector(".clear-game")
+// clean.onclick=clearScores;
+clean.addEventListener("click",clearScores)

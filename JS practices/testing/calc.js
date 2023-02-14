@@ -17,3 +17,8 @@ module.exports = {
     multiply : mul,
     division: div
 }
+
+// export const addition = add
+// export const subtraction = sub
+// export const multiply = mul
+// // export const division = div
