@@ -63,32 +63,39 @@ let totalResult={
     c: 0
 };
 const finalOutput = document.getElementById('finalize')
-const button = document.querySelectorAll(".btn")
+const button = document.querySelectorAll("button")
 
 let playBtn= document.querySelector('#play-btn')
 playBtn.addEventListener('click',function(){
-    model.classList.remove('active')
-
+    model.classList.remove("active");
+    totalResult.c=0;
+    totalResult.p=0
+    comResult.textContent = totalResult.c;
+    yourResult.innerHTML = totalResult.p;
 })
+
+let modelText = document.querySelector('.model-text')
+
+//setting  model Result 
+function ModelResult (a){
+    if (a.c >= 5) {
+        modelText.innerHTML = "You Lost";
+    }
+    if (a.p >= 5) {
+        modelText.innerHTML = "You Win";
+    }
+}
 
 
 button.forEach(btn=>btn.addEventListener('click',function(e){
     
-    let modelText = document.querySelector('.model-text')
+    ModelResult(totalResult);
 
-    if(totalResult.c>=4){
-        modelText.innerHTML='You Lost'
-    } if(totalResult.p>=4){
-        modelText.innerHTML='You Win'
-    }
-
-    if(totalResult.c>=4 || totalResult.p>=4) {
-        totalResult.c=0;
-        totalResult.p=0
+    if(totalResult.c>=5 || totalResult.p>=5) {
     model.classList.add("active")
     playBtn.textContent='play again'
-    ;
-}
+    playBtn();
+    }
 
     let playerSelection = e.target.value
     console.log(e.target.value)
@@ -113,16 +120,3 @@ button.forEach(btn=>btn.addEventListener('click',function(e){
     let displayResult = document.querySelector('.displayResult')
     return displayResult.textContent=result;
 }))
-
-
-
-
-// function game (){
-//     // for (let i = 0; i < 5; i++) {
-//         let playerSelection = "paper"//prompt("Rock, Paper, scissor").toLowerCase()
-//         let computerSelection = getComputerChoice()
-//         // console.log("p : ",playerSelection, "," + " c :"+computerSelection)
-//         console.log(playRound(computerSelection,playerSelection))
-//     // }
-// }
-// //console.log(game())
