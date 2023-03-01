@@ -4,15 +4,91 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock paper scissors</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <style>
-        body{
-            background: rgb(77, 77, 77);
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
         }
-        
+
+        body{
+            /* background: rgb(77, 77, 77); */
+            text-transform: uppercase;
+            width: 100vw;
+            height: 80vh;
+        }
+        .container{
+            display: flex;
+        }
+        .selection button{
+            padding: 1rem !important;
+            cursor: pointer;
+            font-size: 5rem !important;
+            margin: auto 1rem ;
+        }
+        .displayResult{
+            margin: 3rem auto;
+        }#your-choice , #computer-choice{
+            font-size: 5rem;
+        }
+        .model{
+            position: fixed;
+            z-index: 1;
+            top: 25%;
+            left: 40%;
+            width: 300px;
+            transform: translate(0%, 50%) scale(0);
+            transition: transform .5s;
+        }
+        .active{
+            transform: translate(0%, 50%) scale(1);
+        }
     </style>
 </head>
-<body>
+<body >
+    <div class="container bg-black text-white p-4 text-center">
+        <p>
+            ROCK PAPER SCISSOR
+        </p>
+        </div>
+    <div class="col-8 m-auto">
+        <div class=" text-center d-block">
+            <!-- <span>Result : </span> -->
+            <h3 id="finalize">Choose your weapon</h3>
+            <strong class="displayResult"> First to score 5 points wins the game </strong>
+        </div>
+    </div>
+    <div class="container justify-content-center row text-center mb-5 m-auto">
+        <div class="col-3">
+            <div id="your-choice" >❔</div>
+            <div class="fs-4">
+                <span>Player :</span>
+                <span id="yourResult">0</span>
+            </div>
+        </div>
+        
+        <div class="col-3">
+            <div id="computer-choice" >❔</div>
+            <div class="fs-4">
+                <span>Computer :</span>
+                <span id="computerResult">0</span>
+            </div>
+        </div>
+    </div>
+    <div class=" selection container justify-content-center">
+        <div><button class="btn btn-outline-secondary" value="rock" >✊</button></div>
+        <div><button class="btn btn-outline-secondary " value="paper">🤚</button></div>
+        <div><button class="btn btn-outline-secondary" value="scissor">✌️</button></div>
+    </div>
+    <div class=" text-center model row  bg-black text-danger p-5 rounded-5 ">
+        <p class="model-text"></p>
+        <button class="btn btn-outline-success" id="play-btn" value="❔"></button>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>
