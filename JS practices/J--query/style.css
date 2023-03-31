@@ -1,0 +1,12 @@
+.large {
+  /* font-size: 67px; */
+  color: paleturquoise;
+  font-family: cursive;
+  padding: 0;
+  margin: 0;
+}
+
+.h1 {
+  height: 100px;
+  background-color: red;
+}
