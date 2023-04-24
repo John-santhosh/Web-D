@@ -1,0 +1,30 @@
+.child {
+  width: 250px;
+  border: 2px solid rgb(88, 109, 218);
+  border-radius: 0.625rem;
+  margin: 10px;
+  padding: 10px;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+button {
+  background: rgb(88, 109, 218);
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px 1rem;
+  border: none;
+  outline: transparent;
+  cursor: pointer;
+}
+.price {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  text-align: center;
+}
